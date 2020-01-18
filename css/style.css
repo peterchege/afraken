@@ -1193,7 +1193,7 @@ h3 {
   -webkit-transition: transform 500ms ease, background 500ms ease;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.96);
-  background: #2C2C2C;
+  background: rgb(1, 6, 73);
 }
 
 @media (max-width: 767px) {
@@ -1346,7 +1346,7 @@ h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 60px;
   text-transform: capitalize;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   font-weight: 300;
   line-height: 76px;
   margin-bottom: 15px;
