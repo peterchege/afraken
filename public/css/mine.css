@@ -1,0 +1,17 @@
+.logo-size img{
+    width: 200px;
+    height: auto;
+}
+.afraken-head{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(1, 6, 73);
+    letter-spacing: normal;
+}
+
+h4{
+     font-size: 20px;
+     font-weight: 700;
+     color: rgb(1, 6, 73);
+     letter-spacing: normal;
+}
