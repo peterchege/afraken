@@ -374,7 +374,8 @@
                                             <input class="custom-control-input" id="customCheckRegister" type="checkbox"
                                                 required>
                                             <label class="custom-control-label" for="customCheckRegister">
-                                                <span class="text-muted">I agree with the <a href="#!">Privacy
+                                                <span class="text-muted">I agree with the <a
+                                                        href="{{URL::asset('uploads/files/static/afraken_privacy_policy.pdf')}}">Privacy
                                                         Policy</a></span>
                                             </label>
                                         </div>
