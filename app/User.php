@@ -36,4 +36,28 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the category of the user.
+     */
+    public function categories()
+    {
+        return $this->belongsTo('App\Categories', 'category_id');
+    }
+
+    /**
+    * Get the role of the user.
+    */
+    public function role()
+    {
+        return $this->belongsTo('App\Roles', 'role_id');
+    }
+
+    /**
+     * Get the user that belongs to the sub committee.
+     */
+    public function subCommittee()
+    {
+        return $this->belongsTo('App\SubCommittees', 'sub_committee_id');
+    }
 }
