@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('university');
             $table->unsignedInteger('sub_committee_id');
             $table->unsignedInteger('category_id');
-            $table->string('payment');
+            $table->string('payment')->nullable();
             $table->rememberToken();
             $table->timestamps();
 

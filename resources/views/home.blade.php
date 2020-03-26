@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
+    <meta name="author" content="Anthony Baru">
     <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
     <!-- Favicon -->
     <link href="{{asset('dashboard/assets/img/brand/favicon.png')}}" rel="icon" type="image/png">
@@ -641,13 +641,13 @@
                     <div class="col-xl-6">
                         <div class="copyright text-center text-xl-left text-muted">
                             &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1"
-                                target="_blank">Creative Tim</a>
+                                target="_blank">Anthony Baru</a>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <ul class="nav nav-footer justify-content-center justify-content-xl-end">
                             <li class="nav-item">
-                                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Anthony Baru</a>
                             </li>
                             <li class="nav-item">
                                 <a href="https://www.creative-tim.com/presentation" class="nav-link"

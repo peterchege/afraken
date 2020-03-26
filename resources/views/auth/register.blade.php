@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
+    <meta name="author" content="Anthony Baru">
     <title>Create Account | Afraken</title>
     <!-- Favicon -->
     <link href="{{ asset('dashboard/assets/img/brand/favicon.png') }}" rel="icon" type="image/png">
@@ -16,6 +16,8 @@
     <link href="{{ asset('dashboard/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!-- Argon CSS -->
     <link type="text/css" href="{{ asset('dashboard/assets/css/argon.css?v=1.0.0') }}" rel="stylesheet">
+    <!-- Argon CSS -->
+    <link type="text/css" href="{{ asset('css/parsley.css') }}" rel="stylesheet">
 </head>
 
 <body class="bg-default">
@@ -121,7 +123,8 @@
                             <div class="text-center text-muted mb-4">
                                 <small>Or sign up with credentials</small>
                             </div>
-                            <form role="form" method="POST" action="{{ url('/register') }}" autocomplete="off">
+                            <form role="form" method="POST" action="{{ url('/register') }}" autocomplete="off"
+                                class="user-register-form">
                                 @csrf
                                 <input type="hidden" name="role" value="Member">
                                 <div class="row">
@@ -132,7 +135,7 @@
                                                     <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                                 </div>
                                                 <input name="first_name" id="first_name" value="{{ old('first_name') }}"
-                                                    class="form-control" placeholder="First Name" type="text">
+                                                    class="form-control" placeholder="First Name" type="text" required>
                                                 @if ($errors->has('first_name'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('first_name') }}</strong>
@@ -149,7 +152,7 @@
                                                 </div>
                                                 <input name="last_name" id="last_name" class="form-control"
                                                     placeholder="Last Name" type="text" placeholder="Last Name "
-                                                    value="{{ old('last_name') }}">
+                                                    value="{{ old('last_name') }}" required>
                                                 @if ($errors->has('last_name'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('last_name') }}</strong>
@@ -167,7 +170,7 @@
                                                 </div>
                                                 <input id="phone_number" name="phone_number"
                                                     value="{{ old('phone_number') }}" class="form-control"
-                                                    placeholder="Phone Number" type="number">
+                                                    placeholder="Phone Number" type="tel" required>
                                                 @if ($errors->has('phone_number'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('phone_number') }}</strong>
@@ -183,7 +186,7 @@
                                                     <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                                 </div>
                                                 <input id="email" name="email" value="{{ old('email') }}"
-                                                    class="form-control" placeholder="Email" type="email">
+                                                    class="form-control" placeholder="Email" type="email" required>
                                                 @if ($errors->has('email'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('email') }}</strong>
@@ -200,8 +203,9 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-box-2"></i></span>
                                                 </div>
-                                                <select id="category_id" name="category_id" class="form-control">
-                                                    <option value="default" disabled> --select category--</option>
+                                                <select id="category_id" name="category_id" class="form-control"
+                                                    required>
+                                                    <option value="" default> --select category--</option>
                                                     @if(isset($categories))
                                                     @foreach($categories as $category)
                                                     <option value="{{$category->id}}"
@@ -230,8 +234,9 @@
                                                     <span class="input-group-text"><i class="ni ni-box-2"></i></span>
                                                 </div>
                                                 <select id="sub_committee_id" name="sub_committee_id"
-                                                    class="form-control {{ $errors->has('sub_committee_id') ? ' has-error' : '' }}">
-                                                    <option value="default" disabled> - -sub committee --</option>
+                                                    class="form-control {{ $errors->has('sub_committee_id') ? ' has-error' : '' }}"
+                                                    required>
+                                                    <option value="" default> - -sub committee --</option>
                                                     @if(isset($sub_committees))
                                                     @foreach($sub_committees as $sub_committee)
                                                     <option value="{{$sub_committee->id}}"
@@ -264,7 +269,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-box-2"></i></span>
                                                 </div>
-                                                <select class="form-control" id="university" name="university">
+                                                <select class="form-control" id="university" name="university" required>
                                                     <option value="" default> --University in France--
                                                     </option>
                                                     @if(isset($universities))
@@ -295,8 +300,8 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-box-2"></i></span>
                                                 </div>
-                                                <select class="form-control" name="degree">
-                                                    <option value="default" disabled> -- select Degree --</option>
+                                                <select class="form-control" name="degree" required>
+                                                    <option value="" default> -- select Degree --</option>
                                                     <option value="Bachelors"
                                                         {{old('degree') == 'Bachelors' ? 'selected="selected"':''}}>
                                                         Bachelors
@@ -328,7 +333,8 @@
                                                     <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                                 </div>
                                                 <input id="employer" name="employer" value="{{ old('employer') }}"
-                                                    class="form-control" placeholder="Employer" type="text">
+                                                    class="form-control" placeholder="Current Employer" type="text"
+                                                    required>
                                                 @if ($errors->has('employer'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('employer') }}</strong>
@@ -345,7 +351,7 @@
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
                                         <input id="password" name="password" class="form-control" placeholder="Password"
-                                            type="password">
+                                            type="password" required>
                                     </div>
                                     @if ($errors->has('password'))
                                     <span class="help-block">
@@ -359,7 +365,8 @@
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
                                         <input id="password_confirmation" name="password_confirmation"
-                                            class="form-control" placeholder="Confirm Password" type="password">
+                                            class="form-control" placeholder="Confirm Password" type="password"
+                                            data-parsley-equalto="#password" required>
                                     </div>
                                     @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
@@ -423,6 +430,10 @@
     <script src="{{ asset('dashboard/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Argon JS -->
     <script src="{{ asset('dashboard/assets/js/argon.js?v=1.0.0') }}"></script>
+    <!-- Parsley JS -->
+    <script src="{{ asset('js/parsley.min.js') }}"></script>
+    <!-- Custom JS -->
+    <script src="{{ asset('js/mine.js') }}"></script>
 </body>
 
 </html>
