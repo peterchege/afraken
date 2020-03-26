@@ -16,7 +16,7 @@
     <link href="{{ asset('dashboard/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!-- Argon CSS -->
     <link type="text/css" href="{{ asset('dashboard/assets/css/argon.css?v=1.0.0') }}" rel="stylesheet">
-    <!-- Argon CSS -->
+    <!-- Parsley CSS -->
     <link type="text/css" href="{{ asset('css/parsley.css') }}" rel="stylesheet">
 </head>
 
@@ -137,7 +137,7 @@
                                                 <input name="first_name" id="first_name" value="{{ old('first_name') }}"
                                                     class="form-control" placeholder="First Name" type="text" required>
                                                 @if ($errors->has('first_name'))
-                                                <span class="help-block">
+                                                <span class="help-block" role="alert">
                                                     <strong>{{ $errors->first('first_name') }}</strong>
                                                 </span>
                                                 @endif
@@ -351,7 +351,7 @@
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
                                         <input id="password" name="password" class="form-control" placeholder="Password"
-                                            type="password" required>
+                                            type="password" minlength="8" required>
                                     </div>
                                     @if ($errors->has('password'))
                                     <span class="help-block">

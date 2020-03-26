@@ -16,6 +16,8 @@
     <link href="{{ asset('dashboard/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!-- Argon CSS -->
     <link type="text/css" href="{{ asset('dashboard/assets/css/argon.css?v=1.0.0') }}" rel="stylesheet">
+    <!-- Parsley CSS -->
+    <link type="text/css" href="{{ asset('css/parsley.css') }}" rel="stylesheet">
 </head>
 
 <body class="bg-default">
@@ -123,7 +125,7 @@
                             <div class="text-center text-muted mb-4">
                                 <small>Or sign in with credentials</small>
                             </div>
-                            <form role="form" method="POST" action="{{ route('login') }} ">
+                            <form role="form" method="POST" action="{{ route('login') }} " class="login-form">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
@@ -223,6 +225,10 @@
     <script src="{{ asset('dashboard/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Argon JS -->
     <script src="{{ asset('dashboard/assets/js/argon.js?v=1.0.0') }}"></script>
+    <!-- Parsley JS -->
+    <script src="{{ asset('js/parsley.min.js') }}"></script>
+    <!-- Custom JS -->
+    <script src="{{ asset('js/mine.js') }}"></script>
 </body>
 
 </html>
