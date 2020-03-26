@@ -88,20 +88,20 @@
                                             <li><a class="active" href="{{ url('/') }}">home</a></li>
                                             <li><a href="#">About us <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="case_details.html">Who we are</a></li>
-                                                    <li><a href="about.html">meet the team</a></li>
-                                                    <li><a href="elements.html">elements</a></li>
+                                                    <li><a href="{{ url('/who-we-are') }}">Who we are</a></li>
+                                                    <li><a href="{{ url('/about-us') }}">meet the team</a></li>
+                                                    <li><a href="#">elements</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="services.html">Event & Resourece</a></li>
-                                            <li><a href="study.html">Downloads</a></li>
+                                            <li><a href="{{ url('/events-and-resources') }}">Event & Resourece</a></li>
+                                            <li><a href="{{ url('/downloads') }}">Downloads</a></li>
                                             <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                    <li><a href="{{ url('/blog') }}">blog</a></li>
+                                                    <li><a href="{{ url('/single-blog') }}">single-blog</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact us</a></li>
+                                            <li><a href="{{ url('/contact-us') }}">Contact us</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -183,10 +183,10 @@
                                 Services
                             </h3>
                             <ul>
-                                <li><a href="#">Members login</a></li>
-                                <li><a href="#">Create Account</a></li>
-                                <li><a href="#">Events & Resources</a></li>
-                                <li><a href="#">Downloads</a></li>
+                                <li><a href="{{ url('/login') }} ">Members login</a></li>
+                                <li><a href="{{ url('/register') }}">Create Account</a></li>
+                                <li><a href="{{ url('/events-and-resources') }}">Events & Resources</a></li>
+                                <li><a href="{{ url('/downloads') }}">Downloads</a></li>
                             </ul>
 
                         </div>
@@ -197,10 +197,10 @@
                                 Useful Links
                             </h3>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#"> Contact</a></li>
-                                <li><a href="#">Meet the team</a></li>
+                                <li><a href="{{ url('about-us') }}">About</a></li>
+                                <li><a href="{{ url('blog') }}">Blog</a></li>
+                                <li><a href="{{ url('contanct-us') }}"> Contact</a></li>
+                                <li><a href="{{ url('/meet-the-team') }}">Meet the team</a></li>
                             </ul>
                         </div>
                     </div>
